@@ -12,7 +12,7 @@ const Navbar = () => {
                      <li className='font-bold  text-lg lg:mr-3 hover:text-amber-600'>
         <details>
           <summary>My profile</summary>
-          <ul className="w-50 ">
+          <ul className="w-50 top-6">
             <li className="text-sm font-medium "><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""}  to="/addPost">Add Volunteer need Post</NavLink></li>
             <li className="text-sm font-medium "><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""}  to="/managePost">Manage My Posts </NavLink></li>
           </ul>

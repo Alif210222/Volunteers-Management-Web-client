@@ -1,6 +1,8 @@
 import React, { use } from 'react';
 import { useLoaderData } from 'react-router';
 import { AuthContext } from '../../Authentication/AuthContext';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const BeVolunteer = () => {
     const {user} = use(AuthContext)
@@ -14,7 +16,26 @@ const BeVolunteer = () => {
        const form = e.target;
        const formData = new FormData(form)
        const requestData =  Object.fromEntries(formData.entries())
-       console.log(requestData)
+       requestData.requestId =postData._id
+    //    console.log(requestData)
+
+       // data send to database 
+
+       axios.post(`http://localhost:3000/addRequest/${_id}` , requestData)
+       .then(res =>{
+        console.log(res.data)
+         Swal.fire({
+                          title: "Successfully Create !",
+                          icon: "success",
+                          // draggable: true,
+                          showConfirmButton:false,
+                          timer:1500
+                        });
+
+       })
+       .catch(error => {
+        console.log(error)
+       })
 
  }
  
