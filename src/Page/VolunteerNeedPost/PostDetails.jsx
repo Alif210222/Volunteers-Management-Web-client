@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router';
-
+import { MemberContext } from '../../Components/Context/MemberProvider';
 
 
 
@@ -9,11 +9,16 @@ import { Link, useLoaderData } from 'react-router';
 const PostDetails = () => {
       const postDetails = useLoaderData()
         const {_id, title,description,photo,category,location,member,date,name,email} = postDetails
-        const [needMember,setNeedMember] = useState(member)
-              console.log(postDetails)
+        // const [needMember,setNeedMember] = useState(member)
+            //   console.log(postDetails)
 
+    // use context value 
 
+    const {needMember,setNeedMember} = useContext(MemberContext)
 
+    useEffect(() =>{
+        setNeedMember(member)
+    },[member,setNeedMember])
 
 
 

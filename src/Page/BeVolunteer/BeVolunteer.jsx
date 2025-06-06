@@ -1,13 +1,16 @@
-import React, { use } from 'react';
+import React, { use, useContext } from 'react';
 import { useLoaderData } from 'react-router';
 import { AuthContext } from '../../Authentication/AuthContext';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { MemberContext } from '../../Components/Context/MemberProvider';
 
 const BeVolunteer = () => {
     const {user} = use(AuthContext)
     const postData = useLoaderData()
       const {_id, title,description,photo,category,location,member,date,name,email} = postData
+
+      const {needMember,setNeedMember} = useContext(MemberContext)
     // console.log(postData)
 
  const handleFormData = (e) => {
@@ -17,14 +20,15 @@ const BeVolunteer = () => {
        const formData = new FormData(form)
        const requestData =  Object.fromEntries(formData.entries())
        requestData.requestId =postData._id
-    //    console.log(requestData)
+      
 
        // data send to database 
 
        axios.post(`http://localhost:3000/addRequest/${_id}` , requestData)
        .then(res =>{
-        console.log(res.data)
-         Swal.fire({
+        // console.log(res.data)
+        setNeedMember(prev => prev - 1)
+        Swal.fire({
                           title: "Successfully Create !",
                           icon: "success",
                           // draggable: true,

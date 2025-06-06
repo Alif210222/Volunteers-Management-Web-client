@@ -15,6 +15,7 @@ import PostDetails from '../Page/VolunteerNeedPost/PostDetails';
 import ManagePost from '../Page/MyProfile/ManagePost';
 import BeVolunteer from '../Page/BeVolunteer/BeVolunteer';
 
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +44,7 @@ export const router = createBrowserRouter([
            Component:BeVolunteer,
            loader:({params})=>fetch(`http://localhost:3000/postDetails/${params.id}`)
         },
+     
         {
           path:"/managePost",
           Component:ManagePost
