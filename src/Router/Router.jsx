@@ -12,8 +12,9 @@ import AddPostPage from '../Page/AddPost/AddPostPage';
 import Login from '../Page/Login/Login';
 import Register from '../Page/Register/Register';
 import PostDetails from '../Page/VolunteerNeedPost/PostDetails';
-import ManagePost from '../Page/MyProfile/ManagePost';
+
 import BeVolunteer from '../Page/BeVolunteer/BeVolunteer';
+import ManageMyPost from '../Page/ManageMyPost/ManageMyPost';
 
 
 export const router = createBrowserRouter([
@@ -47,7 +48,7 @@ export const router = createBrowserRouter([
      
         {
           path:"/managePost",
-          Component:ManagePost
+          Component:ManageMyPost
         },
        
         {
