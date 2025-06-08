@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router';
 import { MemberContext } from '../../Components/Context/MemberProvider';
+import Swal from 'sweetalert2';
 
 
 
@@ -22,7 +23,25 @@ const PostDetails = () => {
 
 
 
+    useEffect(()=>{
+          if(member == 0){
+        Swal.fire({
+              title: " All vollunteer seat was boocked now. No More need. ",
+              icon:"error",
+            //   draggable: true,
+              showConfirmButton:false,
+              timer:3500
+            });
+       }
+
+    },[member])
+      
+
+
+
     return (
+
+        
 //         
 
 <div className="hero border-0 rounded-sm bg-base-300 md:p-10">
@@ -47,7 +66,17 @@ const PostDetails = () => {
            </div>
 			
 			
- 				<Link to={`/beVolunteer/${_id}`}><button  type="button" className="w-full font-semibold  py-2 mt-1  rounded dark:bg-violet-600 dark:text-gray-50">Be a volunteer</button></Link>
+
+            {
+                member > 0 ?  <div>
+                   <Link to={`/beVolunteer/${_id}`}><button  type="button"   
+                className="w-full font-semibold  py-2 mt-1  rounded dark:bg-violet-600 dark:text-gray-50">Be a volunteer</button></Link>
+                </div>  
+                :
+                <button  className="w-full font-semibold  py-2 mt-1  rounded dark:bg-red-600 dark:text-white">No volunteer need now !</button>
+
+            }
+ 				
     </div>
   </div>
 </div>

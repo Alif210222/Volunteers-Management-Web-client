@@ -11,7 +11,7 @@ const handleDeleteNeedPost =(id)=>{
          console.log(id)
         Swal.fire({
                    title: "Are you sure?",
-                   text: "You want to delete this group!",
+                   text: "You want to delete this post!",
                    icon: "warning",
                    showCancelButton: true,
                    confirmButtonColor: "#3085d6",
@@ -31,12 +31,12 @@ const handleDeleteNeedPost =(id)=>{
                            if(data.deletedCount){
                             Swal.fire({
                             title: "Deleted!",
-                            text: "Your group has been deleted.",
+                            text: "Your post has been deleted.",
                             icon: "success"
                             });
 
                             // remove the group from the state
-                             const  remainPost =  needPosts.filter(grp => grp._id !== id )
+                             const  remainPost =  needPosts.filter(post => post._id !== id )
                                     setNeedPosts(remainPost)
 
                            }

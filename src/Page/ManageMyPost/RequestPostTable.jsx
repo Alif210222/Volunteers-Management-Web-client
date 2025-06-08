@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const RequestPostTable = ({requestPost,index,requestPosts,setRequestPosts}) => {
 
@@ -6,9 +7,45 @@ const RequestPostTable = ({requestPost,index,requestPosts,setRequestPosts}) => {
 
 
 
-const handleDeleteRequestPost=() =>{
+const handleDeleteRequestPost =(id)=>{
+        //  console.log(id)
+        Swal.fire({
+                   title: "Are you sure?",
+                   text: "You want to delete this post!",
+                   icon: "warning",
+                   showCancelButton: true,
+                   confirmButtonColor: "#3085d6",
+                   cancelButtonColor: "#d33",
+                   confirmButtonText: "Yes, delete it!"
+                 })
+                 .then((result) =>{
+                    if(result.isConfirmed){
+                         
 
-}
+                        fetch(`http://localhost:3000/deleteRequest/${requestPost?._id}` , {
+                          method: "DELETE"
+
+                        })
+                        .then(res => res.json())
+                        .then(data => {
+                           if(data.deletedCount){
+                            Swal.fire({
+                            title: "Deleted!",
+                            text: "Your post has been deleted.",
+                            icon: "success"
+                            });
+
+                            // remove the group from the state
+                             const  remainPost =  requestPosts.filter(post => post._id !== id )
+                                    setRequestPosts(remainPost)
+
+                           }
+                        })
+
+                    }
+                 })
+
+  } 
 
 
     return (
