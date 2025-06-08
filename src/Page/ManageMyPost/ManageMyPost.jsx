@@ -41,38 +41,72 @@ useEffect(() =>{
 
     return (
         <div>
-            this is manage my post.
+            
                                                    {/* // my volunteer need post section */}
 
 
             <div>
 
-               <div className='max-w-7xl mx-auto p-6 mb-44'>
+               <div className='max-w-7xl mx-auto p-6 mb-14'>
     
-                   <h1 className='text-center text-4xl font-bold my-10 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent'> My volunteers need post  </h1>
+                   <h1 className='text-center text-4xl font-bold my-10 bg-gradient-to-r 
+                    from-pink-500 to-yellow-500 bg-clip-text text-transparent underline'> My volunteers need post  </h1>
+
+
                    <div className="overflow-x-auto  p-10 border-2 rounded not-[]:">
-                     <table className="table">
-                     {/* head */}
-                     <thead>
-                       <tr className='flex justify-around md:ml-10'>
-                         <th>
-                           <label>
-                             <p>No.</p>
-                           </label>
-                         </th>
-                         <th className='ml-3 md:ml-0'>Post Category</th>
-                         <th className= 'mr-8   md:mr-0 lg:mr-0'>Location</th>
-                         <th className='md:mr-9 mr-12 lg:mr-0'>Edit</th>
-                         <th className='-mr-0 md:-mr-4 '>Remove</th>
-                       </tr>
-                     </thead>
+                                 {/* if there  is no volunteer need post then this text will show inn my need volunteer section */}
+
+                      
+                       <div>
+                          {
+                            needPosts.length == 0 && <div>
+                                 
+                                 <h1>There is no data you have need. </h1>
+
+                            </div>
+                          }    
+
+                       </div>
+                                 
+           
+                            
+                              {/* if you have added any  volunteer post then this text will show       */}
+
+                               {/* condition  */}
+
+                          {
+                              needPosts.length > 0 && <div>
+                                 
+                              <table className="table">
+                                 {/* head */}
+                                     <thead>
+                                       <tr className='flex justify-around md:ml-10'>
+                                         <th>
+                                           <label>
+                                             <p>No.</p>
+                                           </label>
+                                         </th>
+                                         <th className='ml-3 md:ml-0'>Post Category</th>
+                                         <th className= 'mr-8   md:mr-0 lg:mr-0'>Location</th>
+                                         <th className='md:mr-9 mr-12 lg:mr-0'>Edit</th>
+                                         <th className='-mr-0 md:-mr-4 '>Remove post</th>
+                                       </tr>
+                                     </thead>
+                                     
+                                     {
+                                       needPosts.map((needPost,index) => <NeedPostTable   key={index} needPost={needPost} index={index} needPosts={needPosts}  setNeedPosts={setNeedPosts}   > </NeedPostTable>  )
+                                     }
+                    
                      
-                     {
-                       needPosts.map((needPost,index) => <NeedPostTable   key={index} needPost={needPost} index={index} needPosts={needPosts}  setNeedPosts={setNeedPosts}   > </NeedPostTable>  )
-                     }
-    
-     
-                  </table>
+                                   </table>    
+
+                           </div>
+                     }    
+
+                       
+
+
+                    
                </div>
         </div>
 
@@ -93,6 +127,23 @@ useEffect(() =>{
     
                    <h1 className='text-center text-4xl font-bold my-10 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent'> My request post  </h1>
                    <div className="overflow-x-auto  p-10 border-2 rounded not-[]:">
+
+                        {/* if there  is no volunteer request post then this text will show in my request to bea  volunteer section */}
+
+                            <div>
+                          {
+                            requestPosts.length == 0 && <div>
+                                 
+                                 <h1>There is no data you have need. </h1>
+
+                            </div>
+                          }    
+
+                       </div>
+
+
+
+
                      <table className="table">
                      {/* head */}
                      <thead>
@@ -104,8 +155,8 @@ useEffect(() =>{
                          </th>
                          <th className='ml-3 md:ml-0'>Post Category</th>
                          <th className= 'mr-8   md:mr-0 lg:mr-0'>Location</th>
-                         <th className='md:mr-9 mr-12 lg:mr-0'>Edit</th>
-                         <th className='-mr-0 md:-mr-4 '>Remove</th>
+                         <th className='md:mr-9 mr-12 lg:mr-0'>Status</th>
+                         <th className='-mr-0 md:-mr-4 '>Remove request</th>
                        </tr>
                      </thead>
                      

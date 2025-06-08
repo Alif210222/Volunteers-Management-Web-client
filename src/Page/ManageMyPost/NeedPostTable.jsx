@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const NeedPostTable = ({needPost,index,needPosts,setNeedPosts}) => {
 
 
-    console.log(needPost)
+    // console.log(needPost)
 
 const  handleDeleteNeedPost = () =>{
 
