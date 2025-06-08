@@ -2,6 +2,9 @@ import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../../Authentication/AuthContext';
 import NeedPostTable from './needPostTable';
 import RequestPostTable from './RequestPostTable';
+import noNeedData from "../../assets/nodata.json"
+import noReqAnim from "../../assets/noReqDtata.json"
+import Lottie from 'lottie-react';
 
 const ManageMyPost = () => {
     const {user} = use(AuthContext)
@@ -61,7 +64,15 @@ useEffect(() =>{
                           {
                             needPosts.length == 0 && <div>
                                  
-                                 <h1>There is no data you have need. </h1>
+                                 <h1 className='text-center font-bold text-2xl'>There is no post you have added <br /> for volunteers needed. </h1>
+                                 
+                           <div className='flex items-center justify-center'>
+                                <Lottie loop={true} animationData={noNeedData}
+                                
+                                 style={{ height: "500px", width: "500px" }}>
+
+                                </Lottie>
+                             </div>
 
                             </div>
                           }    
@@ -124,11 +135,19 @@ useEffect(() =>{
 
                         {/* if there  is no volunteer request post then this text will show in my request to bea  volunteer section */}
 
-                    <div>
+                   <div>
                           {
                             requestPosts.length == 0 && <div>
                                  
-                                 <h1>There is no data you have need. </h1>
+                                 <h1 className='text-center font-bold text-2xl'>There is no request you have requested <br /> for to be a volunteer . </h1>
+                                 
+                           <div className='flex items-center justify-center'>
+                                <Lottie loop={true} animationData={noReqAnim}
+                                
+                                 style={{ height: "500px", width: "500px" }}>
+
+                                </Lottie>
+                             </div>
 
                             </div>
                           }    

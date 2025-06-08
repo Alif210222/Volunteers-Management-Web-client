@@ -50,7 +50,9 @@ export const router = createBrowserRouter([
           path:"/managePost",
           Component:ManageMyPost
         },
-       
+        {
+         
+        },
         {
             path:"/login",
             Component:Login
