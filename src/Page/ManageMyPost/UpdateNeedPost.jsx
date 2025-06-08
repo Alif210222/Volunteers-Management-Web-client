@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router';
 import { AuthContext } from '../../Authentication/AuthContext';
 import DatePicker from 'react-datepicker';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const UpdateNeedPost = () => {
     const {user} = use(AuthContext)
@@ -49,9 +50,9 @@ const UpdateNeedPost = () => {
 
     return (
          <div >
-                      {/* <Helmet>
-                        <title>Create Group</title>
-                    </Helmet> */}
+                      <Helmet>
+                        <title>Update post </title>
+                    </Helmet>
         
         
                      <div className='bg-[#4f1f01]'>

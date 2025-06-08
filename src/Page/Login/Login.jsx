@@ -7,6 +7,7 @@ import Swal from 'sweetalert2'
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from '../../Authentication/firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
 
 
 const Login = () => {
@@ -62,9 +63,9 @@ const handleLogin = (e) =>{
 
     return (
          <div>
-          {/* <Helmet>
-            <title>Log In</title>
-          </Helmet> */}
+          <Helmet>
+            <title>Login</title>
+          </Helmet>
             <div>
             
              <div className="hero bg-[#362101] min-h-screen">

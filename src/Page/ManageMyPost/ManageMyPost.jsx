@@ -5,6 +5,7 @@ import RequestPostTable from './RequestPostTable';
 import noNeedData from "../../assets/nodata.json"
 import noReqAnim from "../../assets/noReqDtata.json"
 import Lottie from 'lottie-react';
+import { Helmet } from 'react-helmet';
 
 const ManageMyPost = () => {
     const {user} = use(AuthContext)
@@ -44,6 +45,9 @@ useEffect(() =>{
 
     return (
         <div>
+            <Helmet>
+                <title>Manage my post</title>
+            </Helmet>
             
                                                    {/* // my volunteer need post section */}
 

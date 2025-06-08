@@ -4,6 +4,7 @@ import { AuthContext } from '../../Authentication/AuthContext';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { MemberContext } from '../../Components/Context/MemberProvider';
+import { Helmet } from 'react-helmet';
 
 const BeVolunteer = () => {
     const {user} = use(AuthContext)
@@ -48,9 +49,9 @@ const BeVolunteer = () => {
 
     return (
          <div >
-                      {/* <Helmet>
-                        <title>Create Group</title>
-                    </Helmet> */}
+                      <Helmet>
+                        <title>Be Volunteer Request post page</title>
+                    </Helmet>
         
         
                      <div className='bg-[#5c2604]'>

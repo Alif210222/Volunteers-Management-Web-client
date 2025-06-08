@@ -5,6 +5,7 @@ import regAnimation from "../../assets/regLotti.json"
 import { AuthContext } from '../../Authentication/AuthContext';
 import Swal from 'sweetalert2'
  import { ToastContainer, toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
 
 
 const Register = () => {
@@ -47,9 +48,9 @@ const Register = () => {
 
     return (
          <div>
-            {/* <Helmet>
+            <Helmet>
               <title>Register</title>
-            </Helmet> */}
+            </Helmet>
             
             <div className="hero bg-[#362101] min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse">

@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -43,9 +44,9 @@ const AddPostPage = () => {
 
     return (
          <div >
-              {/* <Helmet>
-                <title>Create Group</title>
-            </Helmet> */}
+              <Helmet>
+                <title>Add Volunteer Post</title>
+            </Helmet>
 
 
              <div className='bg-[#4f1f01]'>

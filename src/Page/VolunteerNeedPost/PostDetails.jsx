@@ -2,6 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router';
 import { MemberContext } from '../../Components/Context/MemberProvider';
 import Swal from 'sweetalert2';
+import HelmetExport, { Helmet } from 'react-helmet';
 
 
 
@@ -26,7 +27,7 @@ const PostDetails = () => {
     useEffect(()=>{
           if(member == 0){
         Swal.fire({
-              title: " All vollunteer seat was boocked now. No More need. ",
+              title: " All vollunteers seat was boocked now. No More need. ",
               icon:"error",
             //   draggable: true,
               showConfirmButton:false,
@@ -40,11 +41,13 @@ const PostDetails = () => {
 
 
     return (
-
-        
-//         
+         
 
 <div className="hero border-0 rounded-sm bg-base-300 md:p-10">
+          <Helmet>
+            <title>Post Details</title>
+          </Helmet>
+        
   <div className="hero-content gap-8 flex-col lg:flex-row-reverse mt-8">
     <img
       src={photo}
