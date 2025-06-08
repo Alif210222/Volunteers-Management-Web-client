@@ -102,15 +102,9 @@ useEffect(() =>{
 
                            </div>
                      }    
-
-                       
-
-
-                    
-               </div>
-        </div>
-
-
+   
+                 </div>
+             </div>
 
             </div>
 
@@ -130,7 +124,7 @@ useEffect(() =>{
 
                         {/* if there  is no volunteer request post then this text will show in my request to bea  volunteer section */}
 
-                            <div>
+                    <div>
                           {
                             requestPosts.length == 0 && <div>
                                  
@@ -143,8 +137,15 @@ useEffect(() =>{
 
 
 
+                {/* if have any volunteer request post data is here then this text wi show  */}
 
-                     <table className="table">
+                 {/* condition  */}
+
+               <div>
+                    {
+                            requestPosts.length > 0 && <div>
+                                 
+                  <table className="table">
                      {/* head */}
                      <thead>
                        <tr className='flex justify-around md:ml-10'>
@@ -165,7 +166,14 @@ useEffect(() =>{
                     }
     
      
-                  </table>
+                     </table>
+
+                   </div>
+                }    
+
+              </div>
+
+                    
                </div>
         </div>
 
