@@ -1,38 +1,124 @@
-import React, { use, useEffect } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../../Authentication/AuthContext';
+import NeedPostTable from './needPostTable';
+import RequestPostTable from './RequestPostTable';
 
 const ManageMyPost = () => {
     const {user} = use(AuthContext)
+    const [needPosts , setNeedPosts] = useState([])
+    const [requestPosts , setRequestPosts] = useState([])
 
+
+    console.log(needPosts)
     // my volunteer need post section
 useEffect(() =>{
     fetch(`http://localhost:3000/myPost/${user?.email}`)
     .then(res => res.json())
-    .then(data =>{
-        console.log("need post data",data.length)
+    .then(needData =>{
+        // console.log("need post data",needData.length)
+        setNeedPosts(needData)
     })
    
 },[user])
 
+
+
+
+
 // my request need post section 
 
 useEffect(() =>{
-    
+   fetch(`http://localhost:3000/requestPost/${user?.email}`)
+   .then(res => res.json())
+    .then(requestData =>{
+        // console.log("request post data",data.length)
+        setRequestPosts(requestData)
+    })
+},[user])
    
-},[])
+
 
 
     return (
         <div>
             this is manage my post.
-                  {/* // my volunteer need post section */}
+                                                   {/* // my volunteer need post section */}
+
+
             <div>
+
+               <div className='max-w-7xl mx-auto p-6 mb-44'>
+    
+                   <h1 className='text-center text-4xl font-bold my-10 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent'> My volunteers need post  </h1>
+                   <div className="overflow-x-auto  p-10 border-2 rounded not-[]:">
+                     <table className="table">
+                     {/* head */}
+                     <thead>
+                       <tr className='flex justify-around md:ml-10'>
+                         <th>
+                           <label>
+                             <p>No.</p>
+                           </label>
+                         </th>
+                         <th className='ml-3 md:ml-0'>Post Category</th>
+                         <th className= 'mr-8   md:mr-0 lg:mr-0'>Location</th>
+                         <th className='md:mr-9 mr-12 lg:mr-0'>Edit</th>
+                         <th className='-mr-0 md:-mr-4 '>Remove</th>
+                       </tr>
+                     </thead>
+                     
+                     {
+                       needPosts.map((needPost,index) => <NeedPostTable   key={index} needPost={needPost} index={index} needPosts={needPosts}  setNeedPosts={setNeedPosts}   > </NeedPostTable>  )
+                     }
+    
+     
+                  </table>
+               </div>
+        </div>
+
+
 
             </div>
 
-            {/* //   my request section */}
+
+
+
+
+                                                    {/* //   my request section */}
+
+
 
             <div>
+  <div className='max-w-7xl mx-auto p-6 mb-44'>
+    
+                   <h1 className='text-center text-4xl font-bold my-10 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent'> My request post  </h1>
+                   <div className="overflow-x-auto  p-10 border-2 rounded not-[]:">
+                     <table className="table">
+                     {/* head */}
+                     <thead>
+                       <tr className='flex justify-around md:ml-10'>
+                         <th>
+                           <label>
+                             <p>No.</p>
+                           </label>
+                         </th>
+                         <th className='ml-3 md:ml-0'>Post Category</th>
+                         <th className= 'mr-8   md:mr-0 lg:mr-0'>Location</th>
+                         <th className='md:mr-9 mr-12 lg:mr-0'>Edit</th>
+                         <th className='-mr-0 md:-mr-4 '>Remove</th>
+                       </tr>
+                     </thead>
+                     
+                    {
+                        requestPosts.map((requestPost,index) => <RequestPostTable requestPost={requestPost} index={index}  requestPosts={requestPosts} setRequestPosts={setRequestPosts}></RequestPostTable>  )
+                    }
+    
+     
+                  </table>
+               </div>
+        </div>
+
+                  
 
             </div>   
         </div>
