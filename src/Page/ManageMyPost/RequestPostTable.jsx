@@ -2,7 +2,7 @@ import React from 'react';
 
 const RequestPostTable = ({requestPost,index,requestPosts,setRequestPosts}) => {
 
-console.log(requestPosts.length)
+// console.log(requestPosts.length)
 
 
 
@@ -53,7 +53,7 @@ const handleDeleteRequestPost=() =>{
        
         
           <td>
-              <button onClick={()=>handleDeleteRequestPost(requestPost._id)}  className="btn bg-red-300 border-2 hover:shadow-xl md:ml-12  md:mr-8 lg:ml-14"> Delete</button>
+              <button onClick={()=>handleDeleteRequestPost(requestPost?._id)}  className="btn bg-red-300 border-2 hover:shadow-xl md:ml-12  md:mr-8 lg:ml-14">Cancel </button>
           </td>
       </tr>
     </tbody>

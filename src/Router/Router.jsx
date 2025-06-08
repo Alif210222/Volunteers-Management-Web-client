@@ -15,6 +15,7 @@ import PostDetails from '../Page/VolunteerNeedPost/PostDetails';
 
 import BeVolunteer from '../Page/BeVolunteer/BeVolunteer';
 import ManageMyPost from '../Page/ManageMyPost/ManageMyPost';
+import UpdateNeedPost from '../Page/ManageMyPost/UpdateNeedPost';
 
 
 export const router = createBrowserRouter([
@@ -51,7 +52,9 @@ export const router = createBrowserRouter([
           Component:ManageMyPost
         },
         {
-         
+         path:"/update/:id",
+         Component:UpdateNeedPost,
+         loader:({params})=>fetch(`http://localhost:3000/postDetails/${params.id}`)
         },
         {
             path:"/login",
