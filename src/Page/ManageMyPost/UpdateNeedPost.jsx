@@ -64,7 +64,7 @@ const UpdateNeedPost = () => {
         
                           <div className='md:p-6 md:mx-20 border-3 border-[#ce580f] rounded bg-orange-200 mb-10'>
                         
-                           <h1 className='text-center text-2xl font-bold  underline mb-6'>Update this form</h1>
+                           <h1 className=' text-gray-500 text-center text-2xl font-bold  underline mb-6'>Update this form</h1>
                       
                         <form  onSubmit={handleUpdatePost} className=''>
                             <div className='grid grid-cols-1 lg:grid-cols-2 gap-3'> 

@@ -54,14 +54,14 @@ const BeVolunteer = () => {
                     </Helmet>
         
         
-                     <div className='bg-[#5c2604]'>
+                     <div className='bg-[#602a08]'>
                        
                         <div className='md:p-10 p-2'>
                              <h1 className='text-center text-4xl font-bold  bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent my-10'>
                             Add your Request  
                         </h1>
 
-                        <h1 className='text-white font-semibold text-center mb-10'>In this page , a volunteer can be apply for to be a volunteer for specific role . All this field data for your work is fixed.
+                        <h1 className='text-gray-300  font-semibold text-center mb-10'>In this page , a volunteer can be apply for to be a volunteer for specific role . All this field data for your work is fixed.
                              <br /> <span className='text-red-500'>So, only last 3 field is for you  </span>. please fill those <span className='text-red-500'>specific field</span>  and request for be a volunteer.   </h1>
                           <div className='md:p-6 md:mx-20 border-3 border-[#ce580f] rounded bg-orange-200 mb-10'>
                          

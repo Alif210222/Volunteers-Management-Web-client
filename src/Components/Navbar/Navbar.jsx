@@ -3,8 +3,18 @@ import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../Authentication/AuthContext';
 import usericon from '../../assets/user.png'
 
-const Navbar = () => {
+const Navbar = ({theme, setTheme}) => {
     const {user,logoutUser} = use(AuthContext)
+
+           const handleTheme =()=>{
+                if(theme === "dark"){
+                  setTheme("light")
+                }
+                else {
+                  setTheme("dark")
+                }
+
+           }
 
                const links = <>
                      <li className='font-bold text-lg lg:mr-3 hover:text-amber-600'><NavLink className={({isActive})=> isActive ? "text-orange-500 border-1" : "" } to='/'>Home</NavLink></li>
@@ -34,15 +44,7 @@ const Navbar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+        {links}
       </ul>
     </div> 
     <img src="https://i.ibb.co/7xX09t7t/vollogo.jpg" className='h-10 w-10 border rounded-3xl'  alt="" />
@@ -56,6 +58,49 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
+                                       
+                                       {/* dark and light mood implement  */}
+
+        <button onClick={handleTheme}>
+
+            
+
+              <label className="flex cursor-pointer gap-2 mr-2">
+                       <svg
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="20"
+                         height="20"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         strokeWidth="2"
+                         strokeLinecap="round"
+                         strokeLinejoin="round">
+                         <circle cx="12" cy="12" r="5" />
+                         <path
+                           d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+                       </svg>
+                       <input type="checkbox" value="synthwave" className="toggle theme-controller" />
+                       <svg
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="20"
+                         height="20"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         strokeWidth="2"
+                         strokeLinecap="round"
+                         strokeLinejoin="round">
+                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                       </svg>
+               </label>                         
+        </button>
+
+
+
+
+
+
       {/* // display user profile and username  */}
       {
                  user && (  

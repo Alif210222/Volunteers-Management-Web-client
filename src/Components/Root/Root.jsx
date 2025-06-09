@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet } from 'react-router';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import { ToastContainer } from 'react-toastify';
 
 const Root = () => {
+    const [theme,setTheme] = useState("light")
+
+
+
+
+
+
     return (
-        <div className='bg-amber-50'>
-            <Navbar></Navbar>
+        <div className=' ' data-theme={theme}>
+            <Navbar theme={theme} setTheme={setTheme}></Navbar>
+
+
             <div className='mt-1  mx-auto '>
                  <Outlet></Outlet>
             </div>

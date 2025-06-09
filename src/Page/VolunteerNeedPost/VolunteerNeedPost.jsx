@@ -8,7 +8,7 @@ const VolunteerNeedPost = () => {
     const [posts,setPosts] = useState(postsData)
     console.log(posts)
     return (
-        <div className=' border-0 rounded-2xl bg-amber-50 mt-18 p-6 '>
+        <div className=' border-1 rounded-2xl bg-base-300 mt-18 p-6  mb-16'>
 
             <Helmet>
                 <title>All volunteer need post</title>

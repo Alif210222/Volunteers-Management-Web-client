@@ -44,7 +44,7 @@ useEffect(() =>{
 
 
     return (
-        <div>
+        <div className='bg-base-300'>
             <Helmet>
                 <title>Manage my post</title>
             </Helmet>
@@ -52,7 +52,7 @@ useEffect(() =>{
                                                    {/* // my volunteer need post section */}
 
 
-            <div className='bg-amber-50 pb-6'>
+            <div className=' pb-6'>
 
                <div className='max-w-7xl mx-auto  p-6 mb-14'>
     
