@@ -37,6 +37,7 @@ const AuthProvider = ({children}) => {
        // update user 
 
           const updateUser = (updateData) =>{
+               setLoader(true)
                 return updateProfile(auth.currentUser , updateData)
           }
 
@@ -56,6 +57,7 @@ const AuthProvider = ({children}) => {
 
 const userInfo = {
     user,
+    loader,
     setUser,
     createUser,
     loginUser,

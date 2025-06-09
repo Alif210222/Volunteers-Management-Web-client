@@ -52,12 +52,11 @@ useEffect(() =>{
                                                    {/* // my volunteer need post section */}
 
 
-            <div>
+            <div className='bg-amber-50 pb-6'>
 
-               <div className='max-w-7xl mx-auto p-6 mb-14'>
+               <div className='max-w-7xl mx-auto  p-6 mb-14'>
     
-                   <h1 className='text-center text-4xl font-bold my-10 bg-gradient-to-r 
-                    from-pink-500 to-yellow-500 bg-clip-text text-transparent underline'> My volunteers need post  </h1>
+                   <h1 className='text-center text-4xl font-bold my-10  underline'> My volunteers need post  </h1>
 
 
                    <div className="overflow-x-auto  p-10 border-2 rounded not-[]:">
@@ -134,7 +133,7 @@ useEffect(() =>{
             <div>
   <div className='max-w-7xl mx-auto p-6 mb-44'>
     
-                   <h1 className='text-center text-4xl font-bold my-10 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent'> My request post  </h1>
+                   <h1 className='text-center text-4xl font-bold my-10  underline'> My request post  </h1>
                    <div className="overflow-x-auto  p-10 border-2 rounded not-[]:">
 
                         {/* if there  is no volunteer request post then this text will show in my request to bea  volunteer section */}
@@ -179,7 +178,7 @@ useEffect(() =>{
                          </th>
                          <th className='ml-3 md:ml-0'>Post Category</th>
                          <th className= 'mr-8   md:mr-0 lg:mr-0'>Location</th>
-                         <th className='md:mr-9 mr-12 lg:mr-0'>Status</th>
+                         <th className='md:mr-9 mr-12 lg:mr-0 '>Post Status</th>
                          <th className='-mr-0 md:-mr-4 '>Remove request</th>
                        </tr>
                      </thead>

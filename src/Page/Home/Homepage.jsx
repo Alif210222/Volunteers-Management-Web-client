@@ -4,9 +4,9 @@ import {Helmet} from "react-helmet";
 
 const Homepage = () => {
     return (
-        <div className='mt-20 '>
+        <div className='mt-20  bg-amber-50'>
             <Helmet>
-                <title>Home</title>
+                <title>Volunteer Home</title>
             </Helmet>
               <Banner></Banner>
         </div>

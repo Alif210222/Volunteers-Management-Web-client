@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import loginAnm from "../../assets/login.json"
 import Lottie from 'lottie-react';
 import { AuthContext } from '../../Authentication/AuthContext';
@@ -13,6 +13,7 @@ import { Helmet } from 'react-helmet';
 const Login = () => {
   const {loginUser}= use(AuthContext)
   const navigate = useNavigate()
+  const location = useLocation()
 
 // google login
 
@@ -24,7 +25,7 @@ const Login = () => {
           // console.log(res)
          
               toast("Login with google Successful!")
-              navigate("/")
+              navigate(location?.state ||  "/" )
          })
          .catch(error =>{
           console.log(error)
@@ -49,7 +50,7 @@ const handleLogin = (e) =>{
        .then(res=> {
         
              toast("Login Successful!")
-              navigate("/")
+             navigate(location?.state ||  "/" )
        })
        .catch(error =>{
         console.log(error)

@@ -16,12 +16,15 @@ import PostDetails from '../Page/VolunteerNeedPost/PostDetails';
 import BeVolunteer from '../Page/BeVolunteer/BeVolunteer';
 import ManageMyPost from '../Page/ManageMyPost/ManageMyPost';
 import UpdateNeedPost from '../Page/ManageMyPost/UpdateNeedPost';
+import PrivetRoute from '../Authentication/PrivetRoute';
+import ErrorPage from '../Components/ErrorPage/ErrorPage';
 
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component:Root,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
          {
             index:true,
@@ -34,11 +37,12 @@ export const router = createBrowserRouter([
         },
         {
             path:"/addPost",
-            Component:AddPostPage
+            element:<PrivetRoute> <AddPostPage></AddPostPage> </PrivetRoute> ,
+           
         },
         {
             path:"/details/:id",
-            element:<PostDetails></PostDetails>,
+            element:<PrivetRoute> <PostDetails></PostDetails> </PrivetRoute>   ,
             loader:({params})=>fetch(`http://localhost:3000/postDetails/${params.id}`)
         },
         {
@@ -49,11 +53,13 @@ export const router = createBrowserRouter([
      
         {
           path:"/managePost",
-          Component:ManageMyPost
+          element:<PrivetRoute> <ManageMyPost></ManageMyPost> </PrivetRoute> ,
+          
         },
         {
          path:"/update/:id",
-         Component:UpdateNeedPost,
+         element:<PrivetRoute> <UpdateNeedPost></UpdateNeedPost> </PrivetRoute>,
+         
          loader:({params})=>fetch(`http://localhost:3000/postDetails/${params.id}`)
         },
         {

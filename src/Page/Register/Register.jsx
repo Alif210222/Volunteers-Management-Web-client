@@ -1,6 +1,6 @@
 import Lottie from 'lottie-react';
 import React, { use } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import regAnimation from "../../assets/regLotti.json"
 import { AuthContext } from '../../Authentication/AuthContext';
 import Swal from 'sweetalert2'
@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet';
 const Register = () => {
        const  {createUser,updateUser,setUser} = use(AuthContext)
        const navigate = useNavigate()
+       const location = useLocation()
 
 
 
@@ -31,7 +32,8 @@ const Register = () => {
                 setUser({...user , displayName:name,photoURL : photo })
 
                   toast("Registation Successful!")
-                  navigate("/")
+                  
+                 navigate(location?.state ||  "/" )
               })             
         })
         .catch(error =>{

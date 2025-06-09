@@ -81,12 +81,12 @@ const handleDeleteNeedPost =(id)=>{
           
         </td>
         <Link to={`/update/${needPost?._id}`}>
-            <button  className='btn bg-blue-200 border-2 hover:shadow-xl md:ml-8 lg:ml-15'>Update</button> 
+            <button  className='btn bg-[#8f55a1] text-white border-2 hover:shadow-xl md:ml-8 lg:ml-15'>Update</button> 
         </Link>
        
         
           <td>
-              <button onClick={()=>handleDeleteNeedPost(needPost._id)}  className="btn bg-red-300 border-2 hover:shadow-xl md:ml-12  md:mr-8 lg:ml-14"> Delete</button>
+              <button onClick={()=>handleDeleteNeedPost(needPost._id)}  className="btn bg-red-600 text-white border-2 hover:shadow-xl md:ml-12  md:mr-8 lg:ml-14"> Delete</button>
           </td>
       </tr>
     </tbody>
