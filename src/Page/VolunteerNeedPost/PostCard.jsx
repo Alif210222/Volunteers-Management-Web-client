@@ -7,12 +7,12 @@ const PostCard = ({post}) => {
 
     return (
         <div className="card bg-base-100  shadow-sm p-">
-  <figure>
+  {/* <figure>
     <img
     className='w-full md:h-[300px]'
       src={photo}
       alt="Shoes" />
-  </figure>
+  </figure> */}
   <div className="card-body">
     <h2 className="card-title text-xl font-bold">{title}</h2>
     <div className='flex gap-6'>
