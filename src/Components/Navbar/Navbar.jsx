@@ -17,14 +17,14 @@ const Navbar = ({theme, setTheme}) => {
            }
 
                const links = <>
-                     <li className='font-bold text-lg lg:mr-3 hover:text-amber-600'><NavLink className={({isActive})=> isActive ? "text-orange-500 border-1" : "" } to='/'>Home</NavLink></li>
-                     <li className='font-bold text-lg lg:mr-3 hover:text-amber-600'><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""} to="/volunteerNeed"> Volunteer Need post</NavLink></li> 
-                     <li className='font-bold  text-lg lg:mr-3 hover:text-amber-600'>
+                     <li className='font-bold  text-gray-700 text-lg lg:mr-3 hover:text-amber-600'><NavLink className={({isActive})=> isActive ? "text-orange-500 border-1" : "" } to='/'>Home</NavLink></li>
+                     <li className='font-bold   text-gray-700 text-lg lg:mr-3 hover:text-amber-600'><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""} to="/volunteerNeed"> Volunteer Need post</NavLink></li> 
+                     <li className='font-bold  text-gray-700 text-lg lg:mr-3 hover:text-amber-600'>
         <details>
           <summary>My profile</summary>
-          <ul className="w-50 top-6">
-            <li className="text-sm font-medium "><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""}  to="/addPost">Add Volunteer need Post</NavLink></li>
-            <li className="text-sm font-medium "><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""}  to="/managePost">Manage My Posts </NavLink></li>
+          <ul className="w-50 top-6 bg-gray-200">
+            <li className="text-sm font-medium  text-gray-700"><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""}  to="/addPost">Add Volunteer need Post</NavLink></li>
+            <li className="text-sm font-medium  text-gray-700"><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""}  to="/managePost">Manage My Posts </NavLink></li>
           </ul>
         </details>
       </li>

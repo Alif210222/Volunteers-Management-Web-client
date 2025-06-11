@@ -11,11 +11,11 @@ const ErrorPage = () => {
                    
 
                     <div className='flex  justify-center   '>
-                          <img src={errorImg} alt="error img" className='rounded-2xl h-[600px] w-[600px]' />
+                          <img src={errorImg} alt="error img" className='rounded-2xl h-[500px] w-[500px]' />
                     </div>
 
                     <h1 className='text-xl font-bold text-red-600 mt-6 '>This page is not available at this moment.</h1>
-                    <Link to="/"><button className='btn btn-primary mt-4'> Back to home</button></Link>
+                    <Link to="/"><button className='btn bg-orange-500 text-white mt-4 text-lg'> Back to home</button></Link>
 
                     
                   </div>

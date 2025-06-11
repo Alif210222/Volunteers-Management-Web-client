@@ -53,7 +53,7 @@ const PostDetails = () => {
       src={photo}
       className="w-full md:w-[490px] h-[400px] md:h-[530px] rounded-lg shadow-2xl"
     />
-    <div className='bg-gray-400 p-6  border-0 rounded-2xl w-full  lg:w-[600px]  md:h-[530px] mb-14 md:mb-0'>
+    <div className='bg-[#a4a4a4] p-6  border-0 rounded-2xl w-full  lg:w-[600px]  md:h-[530px] mb-14 md:mb-0'>
         <h1 className='text-xl text-center font-medium underline mb-4'>Post Details</h1>
          			<h1 className="text-2xl font-extrabold dark:text-gray-900">Post Title : {title}</h1>
 			<p className="my-8 text-gray-100 "><span className='font-bold text-black'> Post description : </span> 

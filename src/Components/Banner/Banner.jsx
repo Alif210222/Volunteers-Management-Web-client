@@ -40,10 +40,10 @@ const Banner = () => {
              delay={200} duration={3000} triggerOnce
              
              >  
-            <h1 className=' text-2xl text-white md:text-5xl font-bold mt-14 ml-8 md:ml-0'>Running </h1>
+            <h1 className=' text-2xl text-white md:text-5xl font-bold mt-14 ml-8 md:ml-0'>Medical Assistant </h1>
             </Fade>  
             <Fade duration='down'>  
-            <p className='text-[12px] lg:text-xl text-white font-bold ml-6  md:ml-0'>"Unleash your creativity — let your pencil guide you.
+            <p className='text-[12px] lg:text-xl text-white font-bold ml-6  md:ml-0'>"Providing compassionate support to patients while ensuring efficient clinical operations..
 Turn simple <br /> lines into powerful expressions.
 Draw your world the way you see it.."</p>
         </Fade>
