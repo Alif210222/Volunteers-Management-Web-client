@@ -73,7 +73,7 @@ const PostDetails = () => {
             {
                 member > 0 ?  <div>
                    <Link to={`/beVolunteer/${_id}`}><button  type="button"   
-                className="w-full font-semibold  py-2 mt-1  rounded dark:bg-violet-600 dark:text-gray-50">Be a volunteer</button></Link>
+                className="w-full font-semibold  py-2 mt-1  rounded bg-violet-600 hover:bg-white hover:text-black transition duration-700  text-gray-50">Be a volunteer</button></Link>
                 </div>  
                 :
                 <button  className="w-full font-semibold  py-2 mt-1  rounded dark:bg-red-600 dark:text-white">No volunteer need now !</button>
