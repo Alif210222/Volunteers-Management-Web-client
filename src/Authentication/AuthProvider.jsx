@@ -26,7 +26,7 @@ const AuthProvider = ({children}) => {
        const logoutUser =()=>{
             signOut(auth)
             .then(res => {
-                console.log(res)
+                // console.log(res)
                 toast("Logout Successful")
             } )
             .catch(error =>{

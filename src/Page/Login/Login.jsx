@@ -8,10 +8,12 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from '../../Authentication/firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import { Helmet } from 'react-helmet';
+import { useState } from 'react';
 
 
 const Login = () => {
-  const {loginUser}= use(AuthContext)
+  const {loginUser,setUser}= use(AuthContext)
+  const[error,setError] = useState()
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -20,15 +22,22 @@ const Login = () => {
    const provider = new GoogleAuthProvider();
 
    const handleGoogleLogin =()=>{
+          
            signInWithPopup(auth, provider)
          .then(res=>{
           // console.log(res)
-         
+              setUser(res.user)
               toast("Login with google Successful!")
               navigate(location?.state ||  "/" )
          })
          .catch(error =>{
-          console.log(error)
+          Swal.fire({
+                      title: " Ensure that your email account must be  valid. ",
+                      icon:"error",
+                    //   draggable: true,
+                      showConfirmButton:false,
+                      timer:3500
+                    });
          })
    }
         
@@ -53,7 +62,15 @@ const handleLogin = (e) =>{
              navigate(location?.state ||  "/" )
        })
        .catch(error =>{
-        console.log(error)
+        // console.log(error)
+         Swal.fire({
+                      title: " Ensure that your account must be  registered & using same email & pass for register and login. ",
+                      icon:"error",
+                    //   draggable: true,
+                      showConfirmButton:false,
+                      timer:4500
+                    });
+       
        })
 
 
@@ -86,7 +103,7 @@ const handleLogin = (e) =>{
           <input type="email" className="input" name='email'  placeholder="Enter your email"  required/>
           <label className="label font-semibold text-black text-[15px]">Password</label>
           <input type="password" className="input" name='password' placeholder="Password" required />
-          <p className='text-md text-red-600 text-[14px] mb-4'>error </p>
+          {/* <p className='text-md text-red-600 text-[14px] mb-4'>error </p> */}
          
            
 

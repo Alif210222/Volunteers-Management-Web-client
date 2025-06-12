@@ -27,7 +27,7 @@ const PostDetails = () => {
     useEffect(()=>{
           if(member == 0){
         Swal.fire({
-              title: " All vollunteers seat was boocked now. No More need. ",
+              title: " All vollunteers seat was booked now. No More need. ",
               icon:"error",
             //   draggable: true,
               showConfirmButton:false,

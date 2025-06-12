@@ -1,5 +1,5 @@
 import Lottie from 'lottie-react';
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import regAnimation from "../../assets/regLotti.json"
 import { AuthContext } from '../../Authentication/AuthContext';
@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet';
 
 const Register = () => {
        const  {createUser,updateUser,setUser} = use(AuthContext)
+       const [error,setError] = useState()
        const navigate = useNavigate()
        const location = useLocation()
 
@@ -17,12 +18,21 @@ const Register = () => {
 
   const handleRegister = (e) =>{
         e.preventDefault()
-
+        
+        const password = e.target.password.value;
         const form = e.target;
         const formData = new FormData(form)
-        const  {name,photo, email,password, ...rest} = Object.fromEntries(formData.entries())
+        const  {name,photo,email, ...rest} = Object.fromEntries(formData.entries())
+        
+
+        // if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
+        //       // console.log("!Password must be longer than 5 characters and include at least one lowercase and one uppercase letter.");
+        //  setError("! Password must be longer than 5 characters and include at least one lowercase and one uppercase letter.")
+        //  return;
+        //   }
 
 
+// create user with firebase 
         createUser(email,password)
         .then(res => {
          const user = res.user 
@@ -31,13 +41,14 @@ const Register = () => {
               .then(()=> {
                 setUser({...user , displayName:name,photoURL : photo })
 
-                  toast("Registation Successful!")
-                  
+                  toast("Registation Successful!")                
                  navigate(location?.state ||  "/" )
+
               })             
         })
         .catch(error =>{
           console.log(error)
+          setError("you need to fullfil all the input field properly!")
         })
 
 
@@ -79,7 +90,7 @@ const Register = () => {
 
           <label className="label font-semibold text-black text-[15px]">Password</label>
           <input type="password" className="input" name="password" placeholder="Password" required />
-          <p className='text-red-500'>passError</p>
+          <p className='text-red-500'>{error}</p>
           
           <button type='submit' className="btn btn-neutral mt-4 hover:bg-gray-600">Register</button>
         </form>
