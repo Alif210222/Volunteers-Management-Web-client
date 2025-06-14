@@ -1,17 +1,38 @@
-import React, { use, useState } from 'react';
-import { useLoaderData } from 'react-router';
+import React, { use, useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router';
 import { AuthContext } from '../../Authentication/AuthContext';
 import DatePicker from 'react-datepicker';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
 
 const UpdateNeedPost = () => {
     const {user} = use(AuthContext)
-    const UpdateData = useLoaderData()
+//     const UpdateData = useLoaderData()
+    const [UpdateData , setUpdateData] = useState([])
+//     console.log(UpdateData)
+
       const [selectedDate, setSelectedDate] = useState(UpdateData.date);
       const [category, setCategory] = useState(UpdateData.category)
+      const axiosSecure = useAxiosSecure()
+      const params = useParams()
     //   console.log(postData)
       
+
+        useEffect(() =>{
+               axiosSecure(`postDetails/${params?.id}`) 
+               .then(res =>{
+                  setUpdateData(res.data)
+                  setCategory(res.data.category)
+                  setSelectedDate(res.data.date)
+               })
+               .catch(error=>{
+                  console.log(error)
+               })
+        },[params?.id,axiosSecure])
+
+
+
 
 
     // data update from database 
@@ -23,17 +44,17 @@ const UpdateNeedPost = () => {
               const UpdatePost = Object.fromEntries(formData.entries())
             //   console.log(UpdatePost)
 
-            fetch(`http://localhost:3000/updatePost/${UpdateData?._id}`,{
-                method:"PUT",
+            axiosSecure.put(`/updatePost/${UpdateData?._id}`,UpdatePost ,{
+            //     method:"PUT",
                 headers:{
                     "content-type" : "application/json"
                 },
-                body: JSON.stringify(UpdatePost)
+            //     body: JSON.stringify(UpdatePost)
             })
-            .then(res => res.json())
+            // .then(res => res.json())
             .then(data => {
-                console.log(data)
-                if(data.modifiedCount){
+                console.log(data.data)
+                if(data.data.modifiedCount){
                     Swal.fire({
                   title: "Update successful",
                   icon: "success",
@@ -41,7 +62,6 @@ const UpdateNeedPost = () => {
                 });
                 }
             })
-
 
 
       }

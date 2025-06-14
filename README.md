@@ -1,12 +1,19 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Name of this project - **Volunteer Home**
 
-Currently, two official plugins are available:
+## Purpose of this website : 
+   > Our volunteer website aims to connect individuals with meaningful community service opportunities, making it easier for people to contribute their time and skills where they’re needed most. We support nonprofit organizations by helping them find reliable and passionate volunteers. By encouraging civic engagement and social responsibility, we hope to inspire collective action. The platform simplifies discovering, joining, and managing volunteer work, fostering a culture of compassion.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Our Goal:
+     Our goal is to build a website  that is help a people for need volunteer and  he or she can post for volunteer. and also some people can send request for be a volunteer .
+   
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### key features:
+    
+
+
+use `npm React Tooltip  , npm react helmet , npm react toast ,npm react Awesome Reveal , npm React Simple Typewriter  `
+
+
+# [Visit live site link](https://hobby-hub-website.netlify.app/ )

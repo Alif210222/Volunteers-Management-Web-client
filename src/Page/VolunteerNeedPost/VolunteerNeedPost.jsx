@@ -20,7 +20,7 @@ const VolunteerNeedPost = () => {
         .then(data =>{
             setPosts(data)
         })
-    })
+    },[search])
   
 
     // layot change 

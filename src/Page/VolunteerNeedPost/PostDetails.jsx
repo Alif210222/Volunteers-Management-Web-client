@@ -1,23 +1,57 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { Link, useLoaderData } from 'react-router';
+import React, { createContext, use, useContext, useEffect, useState } from 'react';
+import { Link, useLoaderData, useParams } from 'react-router';
 import { MemberContext } from '../../Components/Context/MemberProvider';
 import Swal from 'sweetalert2';
 import HelmetExport, { Helmet } from 'react-helmet';
+import { AuthContext } from '../../Authentication/AuthContext';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
 
 
 
 
 
 const PostDetails = () => {
-      const postDetails = useLoaderData()
-        const {_id, title,description,photo,category,location,member,date,name,email} = postDetails
+      const {user} = use(AuthContext)
+      // const postDetails = useLoaderData()
+      const [postDetail, setPostDetails] = useState([])
+
+
+        const {_id, title,description,photo,category,location,member,date,name,email} = postDetail
+       const axiosSecure = useAxiosSecure()
+       const params = useParams()
+
         // const [needMember,setNeedMember] = useState(member)
             //   console.log(postDetails)
 
+
+      // console.log(_id)
+
+      // useEffect(()=>{
+      //      axiosSecure(`/postDetails/${_id}`)
+      //      .then(res =>{
+      //       console.log(res.data)
+      //      })    
+      //      .catch(error =>{
+      //       console.log(error)
+      //      })
+      // },[_id,axiosSecure])
+
+  useEffect(()=>{
+           axiosSecure(`/postDetails/${params?.id}`)
+           .then(res =>{
+            console.log(res.data)
+             setPostDetails(res.data)
+           })    
+           .catch(error =>{
+            console.log(error)
+           })
+   },[params?.id,axiosSecure])
+
+
+
+
     // use context value 
-
     const {needMember,setNeedMember} = useContext(MemberContext)
-
     useEffect(() =>{
         setNeedMember(member)
     },[member,setNeedMember])
@@ -36,6 +70,11 @@ const PostDetails = () => {
        }
 
     },[member])
+
+
+// send token to the server
+
+
       
 
 

@@ -1,13 +1,29 @@
 import React from 'react';
+import { motion } from "framer-motion";
 
 const TextCom = () => {
     return (
         <div className='text-center bg-amber-50 my-16 py-10 px-6'>
              <div className='grid grid-cols-2 md:grid-cols-4 ml-20 md:ml-30 lg:ml-46   items-center justify-center  '>
-                <img src="https://i.ibb.co/q3qrCjX1/donation.png" className='h-20  mt-2 shadow-2xl'  alt="" />
-                <img src="https://i.ibb.co/SXhBWQ1d/VOLUNTEER.png" className='h-20  mt-2  shadow-2xl'  alt="" />
-                <img src="https://i.ibb.co/3yhVmqLf/FUND.png" className='h-20  mt-2  shadow-2xl'  alt="" />
-                <img src="https://i.ibb.co/XZhbJcrC/team.png" className='h-20  mt-2  shadow-2xl'  alt="" />
+                <motion.img src="https://i.ibb.co/q3qrCjX1/donation.png" 
+                animate={{y:[-50,0,-50]}}
+                transition={{duration:6,repeat:Infinity}}
+                className='h-20  mt-2 shadow-2xl bg-white'  alt="" />
+
+                <motion.img src="https://i.ibb.co/SXhBWQ1d/VOLUNTEER.png" 
+                animate={{y:[-50,0,-50]}}
+                transition={{duration:12,repeat:Infinity}}
+                className='h-20  mt-2  shadow-2xl bg-white'  alt="" />
+
+                <motion.img src="https://i.ibb.co/3yhVmqLf/FUND.png" 
+                animate={{y:[-50,0,-50]}}
+                transition={{duration:8,repeat:Infinity}}
+                className='h-20  mt-2  shadow-2xl bg-white'  alt="" />
+
+                <motion.img src="https://i.ibb.co/XZhbJcrC/team.png" 
+                animate={{y:[-50,0,-50]}}
+                transition={{duration:12,repeat:Infinity}}
+                className='h-20  mt-2  shadow-2xl bg-white'  alt="" />
             </div>
             <h1 className='text-3xl font-bold mt-12 '>Save Earth From Destroy</h1>
            

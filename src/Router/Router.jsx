@@ -59,7 +59,6 @@ export const router = createBrowserRouter([
         {
          path:"/update/:id",
          element:<PrivetRoute> <UpdateNeedPost></UpdateNeedPost> </PrivetRoute>,
-         
          loader:({params})=>fetch(`http://localhost:3000/postDetails/${params.id}`)
         },
         {

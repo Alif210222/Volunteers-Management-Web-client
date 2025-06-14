@@ -53,11 +53,11 @@ const handleLogin = (e) =>{
       const form = e.target
       const email = form.email.value 
       const password = form.password.value
-      console.log(email,password)
+      // console.log(email,password)
 
        loginUser(email,password)
        .then(res=> {
-        
+            //  console.log(res)
              toast("Login Successful!")
              navigate(location?.state ||  "/" )
        })

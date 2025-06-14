@@ -1,18 +1,37 @@
-import React, { use, useContext } from 'react';
-import { useLoaderData } from 'react-router';
+import React, { use, useContext, useEffect, useState } from 'react';
+import { useLoaderData, useNavigate, useParams } from 'react-router';
 import { AuthContext } from '../../Authentication/AuthContext';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { MemberContext } from '../../Components/Context/MemberProvider';
 import { Helmet } from 'react-helmet';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
 
 const BeVolunteer = () => {
     const {user} = use(AuthContext)
-    const postData = useLoaderData()
-      const {_id, title,description,photo,category,location,member,date,name,email} = postData
+//     const postData = useLoaderData()
+        const [postData , setPostData] = useState([])
 
+      const {_id, title,description,photo,category,location,member,date,name,email} = postData
       const {needMember,setNeedMember} = useContext(MemberContext)
+      const navigate =  useNavigate()
+      const axiosSecure  = useAxiosSecure()
+      const params = useParams()
     // console.log(postData)
+
+       useEffect(()=>{
+                 axiosSecure(`/postDetails/${params?.id}`)
+                 .then(res =>{
+                  console.log(res.data)
+                   setPostData(res.data)
+                 })    
+                 .catch(error =>{
+                  console.log(error)
+                 })
+         },[params?.id,axiosSecure])
+
+
+
 
  const handleFormData = (e) => {
        e.preventDefault()
@@ -28,7 +47,7 @@ const BeVolunteer = () => {
        axios.post(`http://localhost:3000/addRequest/${_id}` , requestData)
        .then(res =>{
         // console.log(res.data)
-        setNeedMember(prev => prev - 1)
+        setNeedMember(needMember - 1)
         Swal.fire({
                           title: " Request send Successfully  !",
                           icon: "success",
@@ -36,6 +55,8 @@ const BeVolunteer = () => {
                           showConfirmButton:false,
                           timer:1500
                         });
+
+          navigate(-1)
 
        })
        .catch(error => {

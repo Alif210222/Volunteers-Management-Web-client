@@ -6,25 +6,43 @@ import noNeedData from "../../assets/nodata.json"
 import noReqAnim from "../../assets/noReqDtata.json"
 import Lottie from 'lottie-react';
 import { Helmet } from 'react-helmet';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
 
 const ManageMyPost = () => {
     const {user} = use(AuthContext)
     const [needPosts , setNeedPosts] = useState([])
     const [requestPosts , setRequestPosts] = useState([])
+    const axiosSecure = useAxiosSecure();
+    
+    
+
+    // console.log(needPosts.length)
 
 
-    console.log(needPosts)
+
     // my volunteer need post section
-useEffect(() =>{
-    fetch(`http://localhost:3000/myPost/${user?.email}`)
-    .then(res => res.json())
-    .then(needData =>{
-        // console.log("need post data",needData.length)
-        setNeedPosts(needData)
-    })
+// useEffect(() =>{
+//     fetch(`http://localhost:3000/myPost/${user?.email}`)
+//     .then(res => res.json())
+//     .then(needData =>{
+//         // console.log("need post data",needData.length)
+//         setNeedPosts(needData)
+//     })
    
-},[user])
+// },[user])
 
+
+useEffect(()=>{
+  axiosSecure(`/myPost/${user?.email}`)
+  .then(needData =>{
+     setNeedPosts(needData?.data)
+  })
+  .catch(error =>{
+    console.log(error)
+  }
+
+  )
+},[user,axiosSecure])
 
 
 
@@ -32,13 +50,12 @@ useEffect(() =>{
 // my request need post section 
 
 useEffect(() =>{
-   fetch(`http://localhost:3000/requestPost/${user?.email}`)
-   .then(res => res.json())
+   axiosSecure(`/requestPost/${user?.email}`)
     .then(requestData =>{
         // console.log("request post data",data.length)
-        setRequestPosts(requestData)
+        setRequestPosts(requestData?.data)
     })
-},[user])
+},[user,axiosSecure])
    
 
 
@@ -88,34 +105,34 @@ useEffect(() =>{
 
                                {/* condition  */}
 
-                          {
-                              needPosts.length > 0 && <div>
-                                 
-                              <table className="table">
-                                 {/* head */}
-                                     <thead>
-                                       <tr className='flex justify-around md:ml-10'>
-                                         <th>
-                                           <label>
-                                             <p>No.</p>
-                                           </label>
-                                         </th>
-                                         <th className='ml-3 md:ml-0'>Post Category</th>
-                                         <th className= 'mr-8   md:mr-0 lg:mr-0'>Location</th>
-                                         <th className='md:mr-9 mr-12 lg:mr-0'>Edit</th>
-                                         <th className='-mr-0 md:-mr-4 '>Remove post</th>
-                                       </tr>
-                                     </thead>
-                                     
-                                     {
-                                       needPosts.map((needPost,index) => <NeedPostTable   key={index} needPost={needPost} index={index} needPosts={needPosts}  setNeedPosts={setNeedPosts}   > </NeedPostTable>  )
-                                     }
+                {
+                    needPosts.length > 0 && <div>
+                       
+                    <table className="table">
+                       {/* head */}
+                           <thead>
+                             <tr className='flex justify-around md:ml-10'>
+                               <th>
+                                 <label>
+                                   <p>No.</p>
+                                 </label>
+                               </th>
+                               <th className='ml-3 md:ml-0'>Post Category</th>
+                               <th className= 'mr-8   md:mr-0 lg:mr-0'>Location</th>
+                               <th className='md:mr-9 mr-12 lg:mr-0'>Edit</th>
+                               <th className='-mr-0 md:-mr-4 '>Remove post</th>
+                             </tr>
+                           </thead>
+                           
+                           {
+                             needPosts.map((needPost,index) => <NeedPostTable   key={index} needPost={needPost} index={index} needPosts={needPosts}  setNeedPosts={setNeedPosts}   > </NeedPostTable>  )
+                           }
                     
                      
                                    </table>    
 
                            </div>
-                     }    
+                 }    
    
                  </div>
              </div>

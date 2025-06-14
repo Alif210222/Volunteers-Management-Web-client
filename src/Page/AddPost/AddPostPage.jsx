@@ -5,13 +5,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
 
 
 
 const AddPostPage = () => {
       const {user} = use(AuthContext)
        const [selectedDate, setSelectedDate] = useState(null);
-
+       const axiosSecure = useAxiosSecure();
 
       const handleAddGroup=(e)=>{
              e.preventDefault() 
@@ -23,7 +24,7 @@ const AddPostPage = () => {
 
             
         // save data to the database 
-            axios.post("http://localhost:3000/addPost", postData)
+           axiosSecure.post("http://localhost:3000/addPost", postData)
             .then(res => {
                 console.log(res.data)
                 Swal.fire({
