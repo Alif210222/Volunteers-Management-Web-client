@@ -10,7 +10,7 @@
 
 
 ### key features:
-     1.bUser Registration & Authentication – Allows volunteers and organizers to sign up, log in, and manage their profiles securely.
+     1.User Registration & Authentication – Allows volunteers and organizers to sign up, log in, and manage their profiles securely.
 
      2. Post & Browse Opportunities – Organizers can post volunteer needs, and users can browse opportunities by category, location, or date.
 
