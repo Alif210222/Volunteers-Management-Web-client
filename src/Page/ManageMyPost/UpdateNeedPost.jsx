@@ -75,14 +75,14 @@ const UpdateNeedPost = () => {
                     </Helmet>
         
         
-                     <div className='bg-[#4f1f01]'>
+                     <div className='bg-[#4f1f01] dark:bg-black'>
                        
                         <div className='md:p-10 p-2'>
                              <h1 className='text-center text-4xl font-bold  bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent my-10'>
                            Update your request Post  
                         </h1>
         
-                          <div className='md:p-6 md:mx-20 border-3 border-[#ce580f] rounded bg-orange-200 mb-10'>
+                          <div className='md:p-6 md:mx-20 border-3 border-[#ce580f] rounded bg-orange-200 dark:bg-black mb-10'>
                         
                            <h1 className=' text-gray-500 text-center text-2xl font-bold  underline mb-6'>Update this form</h1>
                       
@@ -96,13 +96,13 @@ const UpdateNeedPost = () => {
                                 </fieldset>
                                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4">
                                      
-                                      <label className="label font-bold text-[15px] text-[#a54102]">Volunteer Category</label>
+                                      <label className="label font-bold text-[15px] text-[#a54102] ">Volunteer Category</label>
                                       <input
                                       defaultValue={category}
                                       required
                                        id="hobby"
                                        name="category"
-                                       class="block w-full p-2.5 border border-gray-300 bg-blue-50 rounded-lg input  text-gray-900  focus:ring-blue-500 focus:border-blue-500">
+                                       class="block w-full p-2.5 border border-gray-300 bg-blue-50 dark:bg-gray-800 rounded-lg input  text-black dark:text-white  focus:ring-blue-500 focus:border-blue-500">
                                        
                                      </input>
         
@@ -169,7 +169,7 @@ const UpdateNeedPost = () => {
                                              
                                 </fieldset>
         
-                                <input type='submit' className='btn w-full  mt-6 mb-6 bg-orange-800 text-white text-lg font-bold hover:bg-base-100 hover:text-black hover:border-2 hover:border-amber-600' value="Update post"></input>
+                                <input type='submit' className='btn w-full  mt-6 mb-6 bg-orange-800 text-white text-lg font-bold hover:bg-base-100 hover:text-gray-300 hover:border-2 hover:border-amber-600' value="Update post"></input>
                         </form>
                     </div>
                   </div>

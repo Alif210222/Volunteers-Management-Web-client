@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, ScrollRestoration } from 'react-router';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import { ToastContainer } from 'react-toastify';
@@ -25,6 +25,8 @@ const Root = () => {
              <ToastContainer></ToastContainer>
 
             <Footer></Footer>
+
+              <ScrollRestoration></ScrollRestoration>
 
 
         </div>

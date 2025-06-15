@@ -22,7 +22,7 @@ const handleDeleteNeedPost =(id)=>{
                     if(result.isConfirmed){
                          
 
-                        fetch(`http://localhost:3000/deletePost/${needPost?._id}` , {
+                        fetch(`https://volunteer-web-server.vercel.app/deletePost/${needPost?._id}` , {
                           method: "DELETE"
 
                         })

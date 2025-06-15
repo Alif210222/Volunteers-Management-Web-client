@@ -17,14 +17,14 @@ const Navbar = ({theme, setTheme}) => {
            }
 
                const links = <>
-                     <li className='font-bold  text-gray-700 text-lg lg:mr-3 hover:text-amber-600'><NavLink className={({isActive})=> isActive ? "text-orange-500 border-1" : "" } to='/'>Home</NavLink></li>
-                     <li className='font-bold   text-gray-700 text-lg lg:mr-3 hover:text-amber-600'><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""} to="/volunteerNeed"> Volunteer Need post</NavLink></li> 
-                     <li className='font-bold  text-gray-700 text-lg lg:mr-3 hover:text-amber-600'>
+                     <li className='font-bold  text-gray-700 dark:text-white  text-lg lg:mr-3 hover:text-amber-600'><NavLink className={({isActive})=> isActive ? "text-orange-500 border-1" : "" } to='/'>Home</NavLink></li>
+                     <li className='font-bold   text-gray-700 dark:text-white text-lg lg:mr-3 hover:text-amber-600'><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""} to="/volunteerNeed"> Volunteer Need post</NavLink></li> 
+                     <li className='font-bold  text-gray-700 dark:text-white text-lg lg:mr-3 hover:text-amber-600'>
         <details>
           <summary>My profile</summary>
-          <ul className="w-50 top-6 bg-gray-200">
-            <li className="text-sm font-medium  text-gray-700"><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""}  to="/addPost">Add Volunteer need Post</NavLink></li>
-            <li className="text-sm font-medium  text-gray-700"><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""}  to="/managePost">Manage My Posts </NavLink></li>
+          <ul className="w-50 top-6 bg-gray-200 dark:bg-black">
+            <li className="text-sm font-medium  text-gray-700 dark:text-white"><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""}  to="/addPost">Add Volunteer need Post</NavLink></li>
+            <li className="text-sm font-medium  text-gray-700 dark:text-white"><NavLink className={({isActive}) => isActive? "text-orange-500 border-1" : ""}  to="/managePost">Manage My Posts </NavLink></li>
           </ul>
         </details>
       </li>
@@ -35,7 +35,7 @@ const Navbar = ({theme, setTheme}) => {
 
     return (
         <div>
-            <div className="navbar bg-gray-300 shadow-sm px-14">
+            <div className="navbar bg-gray-300 dark:bg-black shadow-sm md:px-14">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,8 +47,8 @@ const Navbar = ({theme, setTheme}) => {
         {links}
       </ul>
     </div> 
-    <img src="https://i.ibb.co/7xX09t7t/vollogo.jpg" className='h-10 w-10 border rounded-3xl'  alt="" />
-    <a className="btn btn-ghost text-2xl text-orange-400 font-bold -ml-2">VOLUNTEER<span className='text-black font-medium'>HOME</span></a>
+    <img src="https://i.ibb.co/7xX09t7t/vollogo.jpg" className='h-10 w-10 border rounded-3xl hidden md:flex'  alt="" />
+    <a className="btn btn-ghost md:text-2xl  text-orange-400 font-bold -ml-2">VOLUNTEER<span className='text-black font-medium'>HOME</span></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -61,7 +61,7 @@ const Navbar = ({theme, setTheme}) => {
                                        
                                        {/* dark and light mood implement  */}
 
-        <button onClick={handleTheme}>
+        <button onClick={handleTheme} className='hidden md:flex'>
 
             
 
@@ -102,9 +102,12 @@ const Navbar = ({theme, setTheme}) => {
 
 
       {/* // display user profile and username  */}
+
+      <div className=' '> 
+
       {
                  user && (  
-                  <div className='border rounded-full relative inline-block group mr-4'>
+                  <div className='border  rounded-full relative inline-block group mr-4'>
                       <img  className='w-10 h-10 rounded-full cursor-pointer  ' src={user ? user.photoURL : usericon } alt="" />
                     <span className='text-center text-white bg-black pt-2 absolute w-35 h-10 top-6 left-1/2 transform -translate-x-1/2 mb-2  px-6 py-1 text-sm  rounded opacity-0 group-hover:opacity-100 transition-opacity'>{user?.displayName} </span>
                      
@@ -112,6 +115,8 @@ const Navbar = ({theme, setTheme}) => {
            
                  )
                }
+
+        </div>
 
 
 

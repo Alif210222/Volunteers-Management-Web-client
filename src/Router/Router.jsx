@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
         {
             path:"/volunteerNeed",
             Component:VolunteerNeedPost,
-            loader:()=> fetch("http://localhost:3000/posts")
+            loader:()=> fetch("https://volunteer-web-server.vercel.app/posts")
         },
         {
             path:"/addPost",
@@ -43,12 +43,12 @@ export const router = createBrowserRouter([
         {
             path:"/details/:id",
             element:<PrivetRoute> <PostDetails></PostDetails> </PrivetRoute>   ,
-            loader:({params})=>fetch(`http://localhost:3000/postDetails/${params.id}`)
+            loader:({params})=>fetch(`https://volunteer-web-server.vercel.app/postDetails/${params.id}`)
         },
         {
            path:"/beVolunteer/:id",
            Component:BeVolunteer,
-           loader:({params})=>fetch(`http://localhost:3000/postDetails/${params.id}`)
+           loader:({params})=>fetch(`https://volunteer-web-server.vercel.app/postDetails/${params.id}`)
         },
      
         {
@@ -59,7 +59,7 @@ export const router = createBrowserRouter([
         {
          path:"/update/:id",
          element:<PrivetRoute> <UpdateNeedPost></UpdateNeedPost> </PrivetRoute>,
-         loader:({params})=>fetch(`http://localhost:3000/postDetails/${params.id}`)
+         loader:({params})=>fetch(`https://volunteer-web-server.vercel.app/postDetails/${params.id}`)
         },
         {
             path:"/login",

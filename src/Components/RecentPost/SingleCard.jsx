@@ -5,7 +5,7 @@ const SingleCard = ({post}) => {
         const {_id,date, title,description,photo,category,location} = post
 
     return (
-         <div className="card bg-base-100  shadow-xl ">
+         <div className="card bg-base-100  dark:bg-black shadow-xl ">
   <figure>
     <img
     className='w-full md:h-[300px]'

@@ -88,11 +88,13 @@ const handleLogin = (e) =>{
             
              <div className="hero bg-[#362101] min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className='hidden md:flex'>
 
+        
         <Lottie loop={true}  animationData={loginAnm} 
                    style={{ height: "500px", width: "500px" }}
                   ></Lottie>
- 
+     </div>
     <div className="card bg-[#f4e7d1]  shrink-0 shadow-2xl border p-10">
     <h1 className="text-4xl font-bold text-[#663e02]">Login now!</h1>
       <div className="card-body ">

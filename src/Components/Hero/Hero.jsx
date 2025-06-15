@@ -15,8 +15,8 @@ const Hero = () => {
 
 
     return (
-        <div className='mb-6  mx-auto '>
-            <section className="bg-gray-200 dark:text-gray-800 border-0 rounded-2xl">
+        <div className='mb-6   mx-auto '>
+            <section className="bg-base-300    border-0 rounded-2xl">
 
 			 
 

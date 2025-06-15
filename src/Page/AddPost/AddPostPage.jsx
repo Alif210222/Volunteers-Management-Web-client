@@ -24,7 +24,7 @@ const AddPostPage = () => {
 
             
         // save data to the database 
-           axiosSecure.post("http://localhost:3000/addPost", postData)
+           axiosSecure.post("https://volunteer-web-server.vercel.app/addPost", postData)
             .then(res => {
                 console.log(res.data)
                 Swal.fire({
@@ -50,7 +50,7 @@ const AddPostPage = () => {
             </Helmet>
 
 
-             <div className='bg-[#4f1f01] '>
+             <div className='bg-[#4f1f01] dark:bg-black'>
                
                 <div className='md:p-10 p-2'>
                      <h1 className='text-center text-4xl font-bold  bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent my-10'>
@@ -60,7 +60,7 @@ const AddPostPage = () => {
                     <h1 className='text-gray-300 font-semibold text-center mb-10'>This page is for those user, who need some volunteer and create a post for need volunteer.
                              <br /> <span className='text-red-500'>So, please fill up this form, for create a post .   </span>. And  click create post button .    </h1>
 
-                  <div className='md:p-6 md:mx-20 border-3 border-[#ce580f] rounded bg-orange-200 mb-10'>
+                  <div className='md:p-6 md:mx-20 border-3 border-[#ce580f] rounded bg-orange-200 dark:bg-black mb-10'>
                 
                    <h1 className='text-center text-gray-600 text-2xl font-bold  underline mb-6'>Fill up this form</h1>
               
@@ -79,7 +79,7 @@ const AddPostPage = () => {
                               required
                                id="hobby"
                                name="category"
-                               class="block w-full p-2.5 border border-gray-300 bg-blue-50 rounded-lg input  text-gray-900  focus:ring-blue-500 focus:border-blue-500">
+                               class="block w-full p-2.5 border border-gray-300 bg-blue-50 dark:bg-black rounded-lg input  text-gray-900 dark:text-gray-400  focus:ring-blue-500 focus:border-blue-500">
                                <option value="">-- Choose an option --</option>
                                <option value="Healthcare">Healthcare </option>
                                <option value="Education">Education</option>
@@ -150,7 +150,7 @@ const AddPostPage = () => {
                                      
                         </fieldset>
 
-                        <input type='submit' className='btn w-full  mt-6 mb-6 bg-orange-800 text-white text-lg font-bold hover:bg-base-100 hover:text-black hover:border-2 hover:border-amber-600' value="Create post"></input>
+                        <input type='submit' className='btn w-full  mt-6 mb-6 bg-orange-800 text-white text-lg font-bold hover:bg-base-100 hover:text-gray-400 hover:border-2 hover:border-amber-600' value="Create post"></input>
                 </form>
             </div>
         </div>

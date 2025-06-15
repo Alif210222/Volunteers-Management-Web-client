@@ -22,7 +22,7 @@ const ManageMyPost = () => {
 
     // my volunteer need post section
 // useEffect(() =>{
-//     fetch(`http://localhost:3000/myPost/${user?.email}`)
+//     fetch(`https://volunteer-web-server.vercel.app/myPost/${user?.email}`)
 //     .then(res => res.json())
 //     .then(needData =>{
 //         // console.log("need post data",needData.length)

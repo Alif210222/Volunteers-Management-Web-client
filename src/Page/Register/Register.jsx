@@ -25,11 +25,11 @@ const Register = () => {
         const  {name,photo,email, ...rest} = Object.fromEntries(formData.entries())
         
 
-        // if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
-        //       // console.log("!Password must be longer than 5 characters and include at least one lowercase and one uppercase letter.");
-        //  setError("! Password must be longer than 5 characters and include at least one lowercase and one uppercase letter.")
-        //  return;
-        //   }
+        if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
+              // console.log("!Password must be longer than 5 characters and include at least one lowercase and one uppercase letter.");
+         setError("! Password must be longer than 5 characters and include at least one lowercase and one uppercase letter.")
+         return;
+          }
 
 
 // create user with firebase 
@@ -67,11 +67,15 @@ const Register = () => {
             
             <div className="hero bg-[#362101] min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse">
- 
+         <div className='hidden md:flex'>
+
+         
            <Lottie loop={true}  animationData={regAnimation} 
             style={{ height: "500px", width: "500px" }}
            ></Lottie>
-   
+     </div>
+
+
     <div className="card bg-[#f4e7d1]  w-full max-w-sm h-[600px] shrink-0 shadow-2xl border p-14 ">
     <h1 className="text-4xl font-bold text-[#684004]">Register now!</h1>
       <div className="card-body ">

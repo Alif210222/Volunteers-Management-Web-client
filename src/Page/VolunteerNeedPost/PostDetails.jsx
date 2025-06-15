@@ -92,19 +92,19 @@ const PostDetails = () => {
       src={photo}
       className="w-full md:w-[490px] h-[400px] md:h-[530px] rounded-lg shadow-2xl"
     />
-    <div className='bg-[#a4a4a4] p-6  border-0 rounded-2xl w-full  lg:w-[600px]  md:h-[530px] mb-14 md:mb-0'>
+    <div className='bg-[#a4a4a4] dark:bg-black p-6  border-0 rounded-2xl w-full  lg:w-[600px]  md:h-[530px] mb-14 md:mb-0'>
         <h1 className='text-xl text-center font-medium underline mb-4'>Post Details</h1>
-         			<h1 className="text-2xl font-extrabold dark:text-gray-900">Post Title : {title}</h1>
-			<p className="my-8 text-gray-100 "><span className='font-bold text-black'> Post description : </span> 
+         			<h1 className="text-2xl font-extrabold ">Post Title : {title}</h1>
+			<p className="my-8  text-white dark:text-white"><span className='font-bold text-black dark:text-white '> Post description : </span> 
  				{description}
             </p>
             <div className='space-y-3 mb-4'>
-             <p  className='text-gray-100'><span className='font-bold text-black'> Category : </span> {category}</p>
-             <p  className='text-gray-100'><span className='font-bold text-black'>  Work location : </span>  {location}</p>
-             <p  className='text-gray-100'><span className='font-bold text-black'> Need member : </span>  {needMember}</p>
-             <p  className='text-gray-100'><span className='font-bold text-black'> Join Deadline : </span>  {date}</p>
-             <p  className='text-gray-100'><span className='font-bold text-black'> Organizer name : </span>  {name}</p>
-             <p  className='text-gray-100'><span className='font-bold text-black'> Organizer email : </span>  {email}</p>
+             <p  className='text-gray-100'><span className='font-bold text-black dark:text-white'> Category : </span> {category}</p>
+             <p  className='text-gray-100'><span className='font-bold text-black dark:text-white'>  Work location : </span>  {location}</p>
+             <p  className='text-gray-100'><span className='font-bold text-black dark:text-white'> Need member : </span>  {needMember}</p>
+             <p  className='text-gray-100'><span className='font-bold text-black dark:text-white'> Join Deadline : </span>  {date}</p>
+             <p  className='text-gray-100'><span className='font-bold text-black dark:text-white'> Organizer name : </span>  {name}</p>
+             <p  className='text-gray-100'><span className='font-bold text-black dark:text-white'> Organizer email : </span>  {email}</p>
            </div>
 			
 			

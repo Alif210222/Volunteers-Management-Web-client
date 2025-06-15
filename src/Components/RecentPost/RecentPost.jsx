@@ -13,7 +13,7 @@ const RecentPost = () => {
     //   console.log(posts)
 
       useEffect(()=>{
-        fetch("http://localhost:3000/recentPost")
+        fetch("https://volunteer-web-server.vercel.app/recentPost")
         .then(res => res.json())
         .then(data =>{
             // console.log(data)
@@ -31,9 +31,9 @@ const RecentPost = () => {
 
     return (
         <div className='mb-20'>
-            <h1 className='text-center text-3xl font-bold underline   mb-16'>Recent Post</h1>
+            <h1 className='text-center text-3xl font-bold underline   mb-16'>Volunteers Need Now</h1>
 
-               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-base-300 p-4 '>
+               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-base-300  p-4 '>
                    {
                        posts.map( post => <SingleCard post={post}></SingleCard>)
                   }

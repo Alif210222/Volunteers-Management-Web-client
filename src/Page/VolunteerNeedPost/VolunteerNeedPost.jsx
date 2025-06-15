@@ -15,7 +15,7 @@ const VolunteerNeedPost = () => {
     console.log(search)
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/posts?searchParams=${search}`)
+        fetch(`https://volunteer-web-server.vercel.app/posts?searchParams=${search}`)
         .then(res => res.json())
         .then(data =>{
             setPosts(data)
@@ -64,7 +64,7 @@ const VolunteerNeedPost = () => {
 
                             
                   <div onClick={handleLayoutToggle} className='flex items-center'>
-                    <p className='font-bold'>Change Layout:</p>
+                    <p className='font-bold text-orange-500'>Change Layout:</p>
                     <div className=' '>
                         {
                            !isTableView  ? <img src={table} alt="table" className='h-10 w-10 text-blue-400' /> : <img src={card} className='h-10 w-10'></img>
@@ -103,9 +103,9 @@ const VolunteerNeedPost = () => {
           {
             isTableView && ( 
 
-               <div>
+               <div >
             
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto border-t-2">
                    <table className="table">
                      {/* head */}
 
