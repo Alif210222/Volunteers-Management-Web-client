@@ -5,6 +5,8 @@ import Hero from '../../Components/Hero/Hero';
 import HomeCard from '../../Components/HomeCard/HomeCard';
 import RecentPost from '../../Components/RecentPost/RecentPost';
 import TextCom from '../../Components/TextComponent/TextCom';
+import GallerySection from '../../Components/HomeGallery/GallerySection';
+import UserReviewSlider from '../../Components/UserRivew/UserReview';
 
 const Homepage = () => {
     return (
@@ -25,7 +27,16 @@ const Homepage = () => {
 
                 </div>
 
+                <div className='max-w-7xl mx-auto'>
+                    <GallerySection></GallerySection>
+
+                </div>
+
+
+
                 <TextCom></TextCom>
+
+                <UserReviewSlider></UserReviewSlider>
             
         </div>
     );

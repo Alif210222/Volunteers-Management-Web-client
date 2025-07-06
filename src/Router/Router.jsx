@@ -18,6 +18,7 @@ import ManageMyPost from '../Page/ManageMyPost/ManageMyPost';
 import UpdateNeedPost from '../Page/ManageMyPost/UpdateNeedPost';
 import PrivetRoute from '../Authentication/PrivetRoute';
 import ErrorPage from '../Components/ErrorPage/ErrorPage';
+import About from '../Page/About/About';
 
 
 export const router = createBrowserRouter([
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
             path:"/volunteerNeed",
             Component:VolunteerNeedPost,
             loader:()=> fetch("https://volunteer-web-server.vercel.app/posts")
+        },
+        {
+        path:"/about",
+        Component:About
         },
         {
             path:"/addPost",

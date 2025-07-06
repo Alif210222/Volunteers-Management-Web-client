@@ -28,6 +28,7 @@ const Navbar = ({theme, setTheme}) => {
           </ul>
         </details>
       </li>
+      <li className='font-bold  text-gray-700 dark:text-white  text-lg lg:mr-3 hover:text-amber-600'><NavLink className={({isActive})=> isActive ? "text-orange-500 border-1" : "" } to='/about'>About</NavLink></li>
                </> 
 
 

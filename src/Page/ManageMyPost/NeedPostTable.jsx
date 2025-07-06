@@ -8,7 +8,7 @@ const NeedPostTable = ({needPost,index,needPosts,setNeedPosts}) => {
     // console.log(needPost)
 
 const handleDeleteNeedPost =(id)=>{
-         console.log(id)
+        //  console.log(id)
         Swal.fire({
                    title: "Are you sure?",
                    text: "You want to delete this post!",
