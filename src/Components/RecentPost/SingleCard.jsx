@@ -38,7 +38,7 @@ const SingleCard = ({post}) => {
         <p className=' text-gray-500 mt-4 font-bold'> Deadline : {date}</p>
         </div>
     <div className="card-actions justify-end">
-      <Link to={`/details/${_id}`}><button className="btn border-2 hover:border-orange-500 bg-orange-500 hover:bg-white  font-bold">View Details</button></Link>
+      <Link to={`/details/${_id}`}><button className="btn border-2 hover:border-orange-500 bg-orange-400 hover:bg-white  font-bold">View Details</button></Link>
     </div>
   </div>
 </div>

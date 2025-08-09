@@ -48,7 +48,7 @@ const Banner = () => {
     >
       <SwiperSlide className='relative'>
 
-        <div className='mb-6   mx-auto '>
+        <div className='mb-6 mt-18  mx-auto '>
                    <section className="bg-amber-50  dark:bg-black    border-0 rounded-2xl">
        
              

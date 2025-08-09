@@ -11,9 +11,9 @@ const galleryImages = [
 
 const GallerySection = () => {
   return (
-    <section className="py-16 px-4 md:px-16 bg-gray-50">
-      <h2 className="text-4xl font-bold text-center mb-4">📸 Volunteer Moments</h2>
-      <p className="text-center text-gray-600 mb-12">Snapshots of our mission, moments, and memories</p>
+    <section className="py-16 px-4 md:px-16 bg-gray- ">
+      <h2 className="text-4xl font-bold dark:text-gray-300 text-center mb-4">📸 Volunteer Moments</h2>
+      <p className="text-center  mb-12">Snapshots of our mission, moments, and memories</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {galleryImages.map((img, index) => (

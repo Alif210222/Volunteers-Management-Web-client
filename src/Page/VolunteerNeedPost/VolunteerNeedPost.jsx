@@ -30,7 +30,7 @@ const VolunteerNeedPost = () => {
 
 
     return (
-        <div className=' border-1 rounded-2xl bg-base-300 mt-18 p-6  mb-16 max-w-7xl mx-auto'>
+        <div className=' border-1 rounded-2xl bg-base-300 mt-32 p-6  mb-16 max-w-7xl mx-auto'>
 
             <Helmet>
                 <title>All volunteer need post</title>
@@ -42,7 +42,7 @@ const VolunteerNeedPost = () => {
 
                <div className='flex justify-between items-center gap-18'>
                          {/* // search input */}
-                  <label className="input mt-4 md:mt-0 md:mr-16">
+                  <label className="input mt-4 md:mt-0 md:mr-16 border-2 border-black">
                         <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                           <g
                             strokeLinejoin="round"

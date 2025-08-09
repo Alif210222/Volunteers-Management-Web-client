@@ -36,7 +36,7 @@ const Navbar = ({theme, setTheme}) => {
 
     return (
         <div>
-            <div className="navbar bg-gray-300 dark:bg-black shadow-sm md:px-14">
+            <div className="navbar bg-gray-300 dark:bg-black shadow-sm md:px-14 fixed top-0 ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

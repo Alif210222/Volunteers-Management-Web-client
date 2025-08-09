@@ -7,6 +7,7 @@ import RecentPost from '../../Components/RecentPost/RecentPost';
 import TextCom from '../../Components/TextComponent/TextCom';
 import GallerySection from '../../Components/HomeGallery/GallerySection';
 import UserReviewSlider from '../../Components/UserRivew/UserReview';
+import ProjectEperience from '../../Components/ProjectExperience/ProjectEperience';
 
 const Homepage = () => {
     return (
@@ -17,8 +18,10 @@ const Homepage = () => {
               <Banner></Banner>
               {/* <Hero></Hero> */}
 
+                  
+             <ProjectEperience></ProjectEperience>
 
-              <HomeCard></HomeCard>
+              
 
 
                 <div className='max-w-7xl mx-auto'>
@@ -35,6 +38,8 @@ const Homepage = () => {
 
 
                 <TextCom></TextCom>
+
+               <HomeCard></HomeCard>
 
                 <UserReviewSlider></UserReviewSlider>
             

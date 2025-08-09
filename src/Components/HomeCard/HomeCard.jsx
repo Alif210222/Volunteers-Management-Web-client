@@ -10,7 +10,7 @@ const HomeCard = () => {
            
 
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 mb-30 gap-10 max-w-7xl w-full justify-items-center '>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 mb-10 gap-10 max-w-7xl w-full justify-items-center '>
 
            
 

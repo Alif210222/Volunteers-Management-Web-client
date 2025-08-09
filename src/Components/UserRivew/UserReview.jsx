@@ -36,7 +36,7 @@ const reviews = [
 
 const UserReviewSlider = () => {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-20 my-20 ">
+    <div className="max-w-4xl mx-auto px-8 mb-26 my-20 ">
       <h2 className="text-center text-3xl font-bold underline   mb-10">What Our Users Say</h2>
       <Swiper
         modules={[Navigation]}
