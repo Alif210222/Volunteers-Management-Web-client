@@ -20,7 +20,7 @@ const PostCard = ({post}) => {
           <p className='border-2 border-orange-400 rounded-2xl   p-2   text-orange-500 font-bold text-center'>{location}</p>
     </div>
     
-        <p className='font-medium text-gray-400 mt-4'>{description}</p>
+        <p className='font-medium text-gray-500 mt-4'>{description}</p>
     <div className="card-actions justify-end">
       <Link to={`/details/${_id}`}><button className="btn border-2 hover:border-orange-500 bg-orange-400 hover:bg-white  font-bold">View Details</button></Link>
     </div>
