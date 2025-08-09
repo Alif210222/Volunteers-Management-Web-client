@@ -15,7 +15,7 @@ const HomeCard = () => {
            
 
           {/* card-1 */}
-        <div className='bg-[#f98110] dark:bg-black   w-fit  flex items-center border-0 rounded-2xl p-4'>
+        <div className='bg-[#f58115] dark:bg-black   w-fit  flex items-center border-0 rounded-2xl p-4'>
            
             <div className='space-y-4'>
                  <h1 className='text-3xl font-bold text-white'>DONATION <span className='dark:hidden '><img src="https://i.ibb.co/q3qrCjX1/donation.png" className='h-20 ml-4 mt-2'  alt="" /></span></h1>
@@ -25,7 +25,7 @@ const HomeCard = () => {
             </div>
         </div>
         {/* card-2 */}
-        <div className='bg-[#f58f2f] dark:bg-black  w-fit flex items-center p-4 border-0 rounded-2xl'>
+        <div className='bg-[#f79940] dark:bg-black  w-fit flex items-center p-4 border-0 rounded-2xl'>
            
             <div className='space-y-4 '>
                  <h1 className='text-3xl font-bold text-white'>VOLUNTEER <span className='dark:hidden '><img src="https://i.ibb.co/SXhBWQ1d/VOLUNTEER.png" className='h-20 ml-4 mt-2'  alt="" /></span></h1>

@@ -31,8 +31,8 @@ const SingleCard = ({post}) => {
   <div className="card-body">
     <h2 className="card-title text-xl font-bold">Post title : {title}</h2>
     <div className=''>
-          <p className='font-bold '>Post category : {category}</p>
-          <p className='font-bold '>Location :  {location}</p>
+          <p className=' '>Post category : {category}</p>
+          <p className=' '>Location :  {location}</p>
     
     
         <p className=' text-gray-500 mt-4 font-bold'> Deadline : {date}</p>
