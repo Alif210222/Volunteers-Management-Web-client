@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
         },
         {
             path:"/details/:id",
-            element:<PrivetRoute> <PostDetails></PostDetails> </PrivetRoute>   ,
+            element: <PostDetails></PostDetails> ,
             loader:({params})=>fetch(`https://volunteer-web-server.vercel.app/postDetails/${params.id}`)
         },
         {
