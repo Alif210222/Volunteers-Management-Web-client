@@ -31,7 +31,7 @@ const RecentPost = () => {
 
     return (
         <div className='mb-20'>
-            <h1 className='text-center text-3xl font-bold underline  mb-6'>Volunteers Need Now</h1> 
+            <h1 className='text-center text-4xl font-bold underline  mb-6'>Volunteers Need Now</h1> 
                   <p className='text-center mb-6 p-4 '>All the post is given here. If you want to be a volunteer , please see the post and the title, category , working <br /> location  is given .  If  you want know details please click the post details . </p>
 
                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-base-100  p-4 '>
