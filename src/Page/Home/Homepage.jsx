@@ -10,7 +10,7 @@ import UserReviewSlider from '../../Components/UserRivew/UserReview';
 
 const Homepage = () => {
     return (
-        <div className='mt-20  '>
+        <div className='mt-20 '>
             <Helmet>
                 <title>Volunteer Home</title>
             </Helmet>

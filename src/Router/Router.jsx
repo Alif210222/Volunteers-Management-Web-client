@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
             path:"/addPost",
             element:<PrivetRoute> <AddPostPage></AddPostPage> </PrivetRoute> ,
            
-        },
+        }, 
         {
             path:"/details/:id",
             element: <PostDetails></PostDetails> ,

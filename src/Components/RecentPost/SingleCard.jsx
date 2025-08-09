@@ -22,7 +22,7 @@ const SingleCard = ({post}) => {
             className="overflow-hidden rounded-2xl shadow-lg hover:scale-105 transform transition duration-300"
   >
     <img
-    className='w-full md:h-[300px]'
+    className='w-full md:h-[200px]'
       src={photo}
       alt="Shoes" />
   </motion.div>
