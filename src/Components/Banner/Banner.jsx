@@ -48,7 +48,7 @@ const Banner = () => {
     >
       <SwiperSlide className='relative'>
 
-        <div className='mb-6 mt-18  mx-auto '>
+        <div className='mb-6   mx-auto '>
                    <section className="bg-amber-50  dark:bg-black    border-0 rounded-2xl">
        
              
@@ -95,28 +95,28 @@ const Banner = () => {
        
           <div className="grid grid-cols-2 gap-4 items-center justify-center p-6 mt-8 ">
             <motion.img src="https://i.ibb.co/cSvGbTbq/volsliderone.jpg" alt=""
-              animate={{y:[-50,0,-50]}}
-                     transition={{duration:10,repeat:Infinity}}
+              // animate={{y:[-50,0,-50]}}
+              //        transition={{duration:10,repeat:Infinity}}
             className="object-contain  border-0 rounded-xl " />
        
        
        
             <motion.img src="https://i.ibb.co/FZ08nbH/volun3.jpg" alt="" 
-            animate={{x:[50,0,50]}}
-                   transition={{duration:10,repeat:Infinity}}
+            // animate={{x:[50,0,50]}}
+            //        transition={{duration:10,repeat:Infinity}}
             className="object-contain  border-0 rounded-xl " />
        
             <motion.img src="https://i.ibb.co/7xs7Bx36/volthree.jpg" alt=""
-              animate={{x:[-50,0,-50]}}
-                   transition={{duration:10,repeat:Infinity}}
+              // animate={{x:[-50,0,-50]}}
+              //      transition={{duration:10,repeat:Infinity}}
             className="object-contain   border-0 rounded-xl " />
        
        
        
        
             <motion.img src="https://i.ibb.co/k2gkNVLy/vol3.jpg" alt="" 
-             animate={{y:[50,0,50]}}
-                    transition={{duration:10,repeat:Infinity}}
+            //  animate={{y:[50,0,50]}}
+            //         transition={{duration:10,repeat:Infinity}}
             className="object-contain  border-0 rounded-xl " />
           </div>
         </div>
@@ -175,28 +175,28 @@ const Banner = () => {
        
           <div className="grid grid-cols-2 gap-4 items-center justify-center p-6 mt-8 ">
             <motion.img src="https://i.ibb.co/1fk45kYk/volalide1.jpg" alt=""
-              animate={{y:[-50,0,-50]}}
-                     transition={{duration:10,repeat:Infinity}}
+              // animate={{y:[-50,0,-50]}}
+              //        transition={{duration:10,repeat:Infinity}}
             className="object-contain  border-0 rounded-xl " />
        
        
        
             <motion.img src="https://i.ibb.co/KcNdb4tF/volslide3.jpg" alt="" 
-            animate={{x:[50,0,50]}}
-                   transition={{duration:10,repeat:Infinity}}
+            // animate={{x:[50,0,50]}}
+            //        transition={{duration:10,repeat:Infinity}}
             className="object-contain  border-0 rounded-xl " />
        
             <motion.img src="https://i.ibb.co/Z66DnWht/volslide2.jpg" alt=""
-              animate={{x:[-50,0,-50]}}
-                   transition={{duration:10,repeat:Infinity}}
+              // animate={{x:[-50,0,-50]}}
+              //      transition={{duration:10,repeat:Infinity}}
             className="object-contain   border-0 rounded-xl " />
        
        
        
        
             <motion.img src="https://i.ibb.co/KcNdb4tF/volslide3.jpg" alt="" 
-             animate={{y:[50,0,50]}}
-                    transition={{duration:10,repeat:Infinity}}
+            //  animate={{y:[50,0,50]}}
+            //         transition={{duration:10,repeat:Infinity}}
             className="object-contain  border-0 rounded-xl " />
           </div>
         </div>
@@ -252,28 +252,28 @@ const Banner = () => {
        
           <div className="grid grid-cols-2 gap-4 items-center justify-center p-6 mt-8 ">
             <motion.img src="https://i.ibb.co/YBnxkFxc/vol1.jpg" alt=""
-              animate={{y:[-50,0,-50]}}
-                     transition={{duration:10,repeat:Infinity}}
+              // animate={{y:[-50,0,-50]}}
+              //        transition={{duration:10,repeat:Infinity}}
             className="object-contain  border-0 rounded-xl " />
        
        
        
             <motion.img src="https://i.ibb.co/d4wGnkKY/volslide4.jpg" alt="" 
-            animate={{x:[50,0,50]}}
-                   transition={{duration:10,repeat:Infinity}}
+            // animate={{x:[50,0,50]}}
+            //        transition={{duration:10,repeat:Infinity}}
             className="object-contain  border-0 rounded-xl " />
        
             <motion.img src="https://i.ibb.co/jZ1TRWLT/de6.jpg" alt=""
-              animate={{x:[-50,0,-50]}}
-                   transition={{duration:10,repeat:Infinity}}
+              // animate={{x:[-50,0,-50]}}
+              //      transition={{duration:10,repeat:Infinity}}
             className="object-contain   border-0 rounded-xl " />
        
        
        
        
             <motion.img src="https://i.ibb.co/KcNdb4tF/volslide3.jpg" alt="" 
-             animate={{y:[50,0,50]}}
-                    transition={{duration:10,repeat:Infinity}}
+            //  animate={{y:[50,0,50]}}
+            //         transition={{duration:10,repeat:Infinity}}
             className="object-contain  border-0 rounded-xl " />
           </div>
         </div>
